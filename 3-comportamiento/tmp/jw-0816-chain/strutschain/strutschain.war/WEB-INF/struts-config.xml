@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+  
+  
+               
+  <action-mappings>
+	
+	<action    	path="/chain1"
+               		type="com.xyz.action.ChainAction"
+               		parameter="com.xyz.chain.Chain1Node1,com.xyz.chain.Chain1Node2,com.xyz.chain.Chain1Node3">
+               		<forward name="success"   path="/jsp/index.jsp"/>
+			   
+    	</action>
+    	
+    	<action    	path="/chain2"
+               		type="com.xyz.action.ChainAction"
+               		parameter="com.xyz.chain.Chain2Node1,com.xyz.chain.Chain2Node2,com.xyz.chain.Chain2Node3">
+               		<forward name="success"   path="/jsp/index.jsp"/>
+			   
+    	</action>
+    </action-mappings>
+</struts-config>
+

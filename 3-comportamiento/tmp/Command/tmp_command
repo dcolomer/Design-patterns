@@ -1,0 +1,7 @@
+El patrón Command, también conocido como Action o Transaction, tiene como principal objetivo desacoplar las clases que realizan peticiones de servicio (Invokers) de las clases que llevan a cabo ese servicio (Receivers). Esta separación de intereses se consigue utilizando objetos Command que encapsulan los detalles de la petición de servicio, es decir, ocultan al Invoker cuál es el objeto real (Receiver) que implementa el servicio y las operaciones que éste ofrece.
+Como veremos, esto es necesario, principalmente, en la elaboración de frameworks, donde es necesario un mecanismo que permita a éstos realizar peticiones a clases de aplicación creadas por el usuario y por tanto, ajenas al framework.
+Por ejemplo, tomemos por caso el framework Swing de Java para el desarrollo de aplicaciones gráficas de escritorio. Swing nos permite utilizar una clase suya JButton que cuando es pulsada invoca a algún objeto cuya clase haya creado el programador de la aplicación. Está claro que sólo el programador de la aplicación sabe que es lo que hay que hacer cuando se pulse el botón, por tanto ¿cómo consiguen los diseñadores de Swing que el botón llame a una clase del programador de la aplicación final? 
+
+ajusta fielmente al concepto de “functor”, es decir, un objeto cuyo único propósito es encapsular un método como un objeto (Command) para poder ser pasado como parámetro a otros objetos a los que en algún momento se les pedirá que ejecuten el objeto Command que se les envió. 
+
+
